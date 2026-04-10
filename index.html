@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pietra Silveira — Portfólio</title>
+  <meta name="description" content="Portfólio de Pietra Silveira — Desenvolvedora Web" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+</head>
+<body>
+
+<!-- Canvas de partículas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Cursor personalizado -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- Preview projeto (segue o mouse) -->
+<div class="proj-preview" id="proj-preview"></div>
+
+<!-- ═══════════════════════════
+     NAVEGAÇÃO LATERAL (Desktop)
+═══════════════════════════ -->
+<nav class="sidenav">
+  <div>
+    <div class="sidenav-logo">Pietra<span>.</span></div>
+    <div class="sidenav-role">Portfólio · 2025</div>
+  </div>
+
+  <ul class="nav-links">
+    <li>
+      <a href="#" data-page="home" class="active">
+        <span class="nav-num">01</span> Home
+      </a>
+    </li>
+    <li>
+      <a href="#" data-page="sobre">
+        <span class="nav-num">02</span> Sobre Mim
+      </a>
+    </li>
+    <li>
+      <a href="#" data-page="projetos">
+        <span class="nav-num">03</span> Projetos
+      </a>
+    </li>
+    <li>
+      <a href="#" data-page="contato">
+        <span class="nav-num">04</span> Contato
+      </a>
+    </li>
+  </ul>
+
+  <div class="sidenav-footer">
+    <a href="https://github.com/pietrasilveira" target="_blank">GitHub</a> ·
+    <a href="https://linkedin.com/in/pietrasilveira" target="_blank">LinkedIn</a>
+    <br><br>
+    © 2025 Pietra Silveira
+  </div>
+</nav>
+
+<!-- ═══════════════════════════
+     BARRA MOBILE
+═══════════════════════════ -->
+<div class="mobile-bar">
+  <div class="mobile-logo">Pietra<span>.</span></div>
+  <button class="mobile-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+
+<div class="mobile-menu">
+  <a href="#" data-page="home">01 — Home</a>
+  <a href="#" data-page="sobre">02 — Sobre Mim</a>
+  <a href="#" data-page="projetos">03 — Projetos</a>
+  <a href="#" data-page="contato">04 — Contato</a>
+</div>
+
+<!-- ═══════════════════════════
+     CONTEÚDO PRINCIPAL
+═══════════════════════════ -->
+<main class="main-content">
+
+ <!-- ══════════ HOME ══════════ -->
+<div id="page-home" class="page">
+
+  <div class="home-photo">
+    <img src="Portfolio-pietra.jpg" alt="Pietra Silveira" />
+  </div>
+
+  <div class="home-wrap">
+
+    <div class="home-left">
+      <div class="home-number">P</div>
+      <span class="home-eyebrow">Bem-vinda ao meu portfólio</span>
+      <h1 class="home-name">
+        <span class="line1">Pietra</span>
+        <span class="line2">Silveira</span>
+      </h1>
+      <p class="home-desc">
+        <strong><span id="typed"></span><span style="color:var(--gold);opacity:0.7">|</span></strong>
+        <br><br>
+        Olá, eu sou a Pietra Silveira. Estudante de Desenvolvimento de Sistemas.
+        Ajudo você a criar novas experiências digitais com
+        <strong>HTML, CSS, JavaScript e Python</strong> — transformando
+        ideias em código que funciona de verdade.
+      </p>
+      <div class="home-cta-row">
+        <a href="#" class="btn-gold" data-page="projetos">Ver Meus Projetos →</a>
+        <a href="#" class="btn-outline" data-page="contato">Entrar em Contato</a>
+      </div>
+    </div>
+
+  
+  </div><!-- fecha home-wrap -->
+
+  <!-- Ticker animado no rodapé -->
+  <div class="ticker-wrap">
+
+      <!-- Painel lateral com stats -->
+      <div class="home-right">
+        <div class="stat-item">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Projetos desenvolvidos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Linguagens estudadas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Vontade de aprender</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Dedicação & criatividade</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Ticker animado no rodapé -->
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <span class="ticker-item"><span class="dot"></span> HTML</span>
+        <span class="ticker-item"><span class="dot"></span> CSS</span>
+        <span class="ticker-item"><span class="dot"></span> JavaScript</span>
+        <span class="ticker-item"><span class="dot"></span> Python</span>
+        <span class="ticker-item"><span class="dot"></span> Git & GitHub</span>
+        <span class="ticker-item"><span class="dot"></span> Design Responsivo</span>
+        <span class="ticker-item"><span class="dot"></span> UI/UX</span>
+        <!-- Duplicado para loop infinito -->
+        <span class="ticker-item"><span class="dot"></span> HTML</span>
+        <span class="ticker-item"><span class="dot"></span> CSS</span>
+        <span class="ticker-item"><span class="dot"></span> JavaScript</span>
+        <span class="ticker-item"><span class="dot"></span> Python</span>
+        <span class="ticker-item"><span class="dot"></span> Git & GitHub</span>
+        <span class="ticker-item"><span class="dot"></span> Design Responsivo</span>
+        <span class="ticker-item"><span class="dot"></span> UI/UX</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ SOBRE MIM ══════════ -->
+  <div id="page-sobre" class="page">
+    <div class="sobre-layout">
+
+      <div class="sobre-main">
+        <div class="page-label">02 — Sobre Mim</div>
+
+        <h2 class="page-title">
+          Quem sou<br><em>eu?</em>
+        </h2>
+
+        <p class="bio-text">
+          Olá! Sou <strong>Pietra Silveira</strong>, estudante de Tecnologia da
+          Informação com uma paixão genuína pelo mundo do desenvolvimento web e
+          da programação.
+        </p>
+        <p class="bio-text">
+          Estou em constante aprendizado, explorando <strong>HTML, CSS,
+          JavaScript e Python</strong> — sempre buscando criar soluções
+          criativas e funcionais. Acredito que a tecnologia tem o poder de
+          transformar vidas, e é por isso que me dedico todos os dias a
+          evoluir como desenvolvedora.
+        </p>
+        <p class="bio-text">
+          Quando não estou codando, gosto de explorar novas ferramentas,
+          estudar design de interfaces e entender como a experiência do
+          usuário pode ser melhorada com criatividade e empatia.
+        </p>
+
+        <!-- Soft Skills -->
+        <div class="soft-title">— Soft Skills</div>
+        <div class="soft-pills">
+          <span class="soft-pill">Comunicação</span>
+          <span class="soft-pill">Trabalho em equipe</span>
+          <span class="soft-pill">Organização</span>
+          <span class="soft-pill">Criatividade</span>
+          <span class="soft-pill">Proatividade</span>
+          <span class="soft-pill">Adaptabilidade</span>
+          <span class="soft-pill">Resolução de problemas</span>
+          <span class="soft-pill">Empatia</span>
+        </div>
+
+        <!-- Hard Skills -->
+        <div class="hard-title">— Hard Skills</div>
+
+        <div class="skill-row">
+          <span class="skill-name">HTML5</span>
+          <div class="skill-track"><div class="skill-fill" data-w="85"></div></div>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">CSS</span>
+          <div class="skill-track"><div class="skill-fill" data-w="70"></div></div>
+          <span class="skill-pct">70%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Python</span>
+          <div class="skill-track"><div class="skill-fill" data-w="70"></div></div>
+          <span class="skill-pct">70%</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-track"><div class="skill-fill" data-w="60"></div></div>
+          <span class="skill-pct">60%</span>
+        </div>
+        
+        <div class="skill-row">
+          <span class="skill-name">Git & GitHub</span>
+          <div class="skill-track"><div class="skill-fill" data-w="65"></div></div>
+          <span class="skill-pct">65%</span>
+        </div>
+
+      </div>
+
+      <!-- Coluna lateral -->
+      <div class="sobre-side">
+        <div class="side-block">
+          <div class="side-block-label">Localização</div>
+          <div class="side-block-val">🇧🇷</div>
+          <div class="side-block-desc">Brasil — disponível para trabalho remoto</div>
+        </div>
+        <div class="side-block">
+          <div class="side-block-label">Foco atual</div>
+          <div class="side-block-val" style="font-size:1.2rem;color:var(--white)">Desenvolvimento Web</div>
+          <div class="side-block-desc">Cursando Desenvolvimento de Sistemas no Senai</div>
+        </div>
+        <div class="side-block">
+          <div class="side-block-label">Projetos</div>
+          <div class="side-block-val">5+</div>
+          <div class="side-block-desc">Projetos desenvolvidos durante o curso</div>
+        </div>
+        <div class="side-block">
+          <div class="side-block-label">Objetivo</div>
+          <div class="side-block-val" style="font-size:1.1rem;color:var(--white)">Estágio em TI</div>
+          <div class="side-block-desc">Busco oportunidade para crescer como desenvolvedora</div>
+        </div>
+        <div style="margin-top:1rem">
+          <a href="#" class="btn-gold" data-page="contato">Fale comigo →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════ PROJETOS ══════════ -->
+  <div id="page-projetos" class="page">
+
+    <div class="projetos-header">
+      <div>
+        <div class="page-label">03 — Projetos</div>
+        <h2 class="page-title" style="font-size:3rem">O que já <em>criei</em></h2>
+      </div>
+      <div class="projetos-count">06</div>
+    </div>
+
+    <div class="projects-list">
+
+      <div class="project-row"
+           data-emoji="🌐"
+           data-color="linear-gradient(135deg,#1a0f2e,#2d1a4a)">
+        <span class="proj-num">01.</span>
+        <div class="proj-info">
+          <div class="proj-title">Portfólio Pessoal</div>
+          <div class="proj-desc">Site de portfólio profissional com navegação SPA, partículas em canvas e design editorial escuro</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">HTML</span>
+          <span class="proj-tag">CSS</span>
+          <span class="proj-tag">JS</span>
+        </div>
+        <a href="https://github.com/pietrasilveira" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+
+      <div class="project-row"
+           data-emoji="🧮"
+           data-color="linear-gradient(135deg,#0f1a1a,#1a2d2a)">
+        <span class="proj-num">02.</span>
+        <div class="proj-info">
+          <div class="proj-title">Calculadora Interativa</div>
+          <div class="proj-desc">Calculadora funcional em JavaScript puro com operações matemáticas e interface responsiva</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">JavaScript</span>
+          <span class="proj-tag">CSS</span>
+        </div>
+        <a href="https://github.com/pietrasilveira" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+
+      <div class="project-row"
+           data-emoji="📋"
+           data-color="linear-gradient(135deg,#1a1a0f,#2a2d1a)">
+        <span class="proj-num">03.</span>
+        <div class="proj-info">
+          <div class="proj-title">Lista de Tarefas</div>
+          <div class="proj-desc">To-Do List com adicionar, concluir e remover tarefas, salvo no LocalStorage do navegador</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">HTML</span>
+          <span class="proj-tag">CSS</span>
+          <span class="proj-tag">JS</span>
+        </div>
+        <a href="https://github.com/pietrasilveira" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+
+      <div class="project-row"
+           data-emoji="🐍"
+           data-color="linear-gradient(135deg,#0f1a12,#1a2d1e)">
+        <span class="proj-num">04.</span>
+        <div class="proj-info">
+          <div class="proj-title">Conversor de Unidades</div>
+          <div class="proj-desc">Script Python para converter temperatura, distância e peso — exercício de lógica e funções</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+        </div>
+        <a href="https://github.com/pietrasilveira" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+
+      <div class="project-row"
+           data-emoji="🎨"
+           data-color="linear-gradient(135deg,#1a0f1a,#2d1a2a)">
+        <span class="proj-num">05.</span>
+        <div class="proj-info">
+          <div class="proj-title">Landing Page</div>
+          <div class="proj-desc">Página de apresentação de produto fictício com layout responsivo e animações CSS</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">HTML</span>
+          <span class="proj-tag">CSS</span>
+        </div>
+        <a href="https://github.com/pietrasilveira" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+
+      <div class="project-row"
+           data-emoji="🎮"
+           data-color="linear-gradient(135deg,#0f0f1a,#1a1a2d)">
+        <span class="proj-num">06.</span>
+        <div class="proj-info">
+          <div class="proj-title">Jogo da Memória</div>
+          <div class="proj-desc">Mini-jogo com cartas, contador de tentativas e animação de flip — feito com JS puro</div>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">JavaScript</span>
+          <span class="proj-tag">CSS</span>
+        </div>
+        <a href="https://github.com/pietrasilveira" target="_blank" class="proj-link">GitHub →</a>
+      </div>
+
+    </div>
+
+    <div style="padding:3rem 5rem; border-top:1px solid var(--border); display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
+      <p style="color:var(--muted); font-size:0.9rem; font-weight:300;">Veja todos os repositórios:</p>
+      <a href="https://github.com/pietrasilveira" target="_blank" class="btn-outline">
+        GitHub →
+      </a>
+    </div>
+
+  </div>
+
+  <!-- ══════════ CONTATO ══════════ -->
+  <div id="page-contato" class="page">
+    <div class="contato-layout">
+
+      <div class="contato-left">
+        <div>
+          <div class="page-label">04 — Contato</div>
+          <h2 class="contato-big">
+            Vamos<br><em>conversar?</em>
+          </h2>
+          <p class="contato-sub">
+            Seja para uma oportunidade de estágio, projeto acadêmico
+            ou só para trocar uma ideia sobre tecnologia — me manda uma mensagem!
+          </p>
+        </div>
+
+        <div class="contact-items">
+          <a href="mailto:pietra.silveira@email.com" class="contact-item">
+            <span class="contact-icon">✉</span>
+            <div class="contact-info-block">
+              <span class="contact-label">Email</span>
+              <span class="contact-val">silveirapietra84@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/pietrasilveira" target="_blank" class="contact-item">
+            <span class="contact-icon">in</span>
+            <div class="contact-info-block">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-val">linkedin.com/in/pietrasilveira</span>
+            </div>
+          </a>
+          <a href="https://github.com/pietrasilveira" target="_blank" class="contact-item">
+            <span class="contact-icon">⌥</span>
+            <div class="contact-info-block">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-val">github.com/Pietraasilveira</span>
+            </div>
+          </a>
+        </div>
+
+        <p style="font-size:0.8rem; color:var(--muted); font-weight:300;">
+          © 2025 Pietra Silveira — Feito com HTML, CSS & JavaScript
+        </p>
+      </div>
+
+      <div class="contato-right">
+        <div class="form-eyebrow">✦ Enviar mensagem direta</div>
+
+        <form id="contact-form">
+          <div class="form-field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          </div>
+          <div class="form-field">
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Sobre o que deseja falar?" required />
+          </div>
+          <div class="form-field">
+            <label for="msg">Mensagem</label>
+            <textarea id="msg" name="msg" placeholder="Escreva aqui..." required></textarea>
+          </div>
+          <button type="submit" class="btn-send">Enviar Mensagem →</button>
+          <div id="form-ok" class="form-ok">✦ Mensagem enviada! Em breve entro em contato.</div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
